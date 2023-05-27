@@ -33,12 +33,14 @@ public class Google_StepDefinitions {
 
     @When("user enters {string} in the Google search box")
     public void userEntersInTheGoogleSearchBox(String searchKey) {
+        log.info("Filling the search box");
         googleSearchPage.searchBox.sendKeys(searchKey);
         BrowserUtils.sleep(1);
     }
 
     @Then("user clicks on the search button")
     public void userClicksOnTheSearchButton() {
+        log.info("Clicking on the search box");
         googleSearchPage.searchBox.click();
         googleSearchPage.searchBox.sendKeys(Keys.ENTER);
         BrowserUtils.sleep(1);
@@ -46,6 +48,7 @@ public class Google_StepDefinitions {
 
     @Then("user should see {string} in the title")
     public void userShouldSeeInTheTitle(String expectedTitle) {
+        log.info("Verifying the title");
         BrowserUtils.verifyTitleContains(expectedTitle);
     }
 
