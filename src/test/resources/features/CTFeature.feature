@@ -7,4 +7,4 @@ Feature: Google search functionality ct
     Given user is on the Google search page ct
     When user enters "apple" in the Google search box ct
     Then user clicks on the search button ct
-    Then user should see asads "apple" in ozzy the title ct 22222222
+    Then user should see asads "apple" in ozzy the title ct 222222223333
